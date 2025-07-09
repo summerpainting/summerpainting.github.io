@@ -1,21 +1,73 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>//biaoti//</title>
+    <title>//网站名字//</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="//自定义字体链接，可留空//" rel="stylesheet">
+    <style>
+        .gallery-caption h3 {
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            background: linear-gradient(90deg, var(--primary-color) 60%, var(--secondary-color) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 12px #a5b4fc33;
+            padding: 0 8px;
+            display: inline-block;
+        }
+
+        .gallery-item,
+        .step-card,
+        .price-item,
+        .contact-card {
+            border-radius: var(--radius-large);
+            background: var(--mica-background);
+            backdrop-filter: var(--mica-blur);
+            -webkit-backdrop-filter: var(--mica-blur);
+            box-shadow: var(--shadow-light);
+        }
+
+        .gallery-img {
+            border-radius: var(--radius-medium) var(--radius-medium) 0 0;
+        }
+
+        .order-btn {
+            font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border: none;
+            outline: none;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            border-radius: 32px;
+            box-shadow: 0 2px 12px #a5b4fc33;
+            padding: 16px 40px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+
+        .order-btn:hover {
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+            box-shadow: 0 4px 24px #a5b4fc55;
+        }
+    </style>
 </head>
+
 <body>
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">//</div>
-            <ul class="nav-links">
-                <li><a href="#gallery">作品展示</a></li>
-                <li><a href="#process">接单流程</a></li>
-                <li><a href="#pricing">定价参考</a></li>
-                <li><a href="#contact">联系方式</a></li>
+            <div class="logo">//LOGO或名称//</div>
+            <ul class="nav-links"></ul>
+                <li><a href="#gallery">//作品展示区标题//</a></li>
+                <li><a href="#process">//接单流程区标题//</a></li>
+                <li><a href="#pricing">//定价参考区标题//</a></li>
+                <li><a href="contact.html">//下单//</a></li>
             </ul>
             <div class="menu-toggle">
                 <span></span>
@@ -25,82 +77,96 @@
         </div>
     </nav>
 
+    <!-- 头图/自我介绍 -->
+    <section class="section hero">
+        <div class="container" style="text-align:center;">
+            <img src="//头像图片链接//">
+            <h1>//主标题//</h1>
+            <p style="font-size:1.15rem;color:var(--text-secondary);margin-bottom:0;">//自我介绍或副标题//</p>
+        </div>
+    </section>
+
     <!-- 作品展示区 -->
     <section id="gallery" class="section">
         <div class="container">
-            <h2 class="section-title">作品展示</h2>
+            <h2 class="section-title">//作品展示区标题//</h2>
             <div class="gallery-grid">
-                <!-- 作品卡片占位符 -->
                 <div class="gallery-item">
                     <div class="gallery-img-container">
-                        <div class="gallery-img placeholder" data-img-id="1"></div>
+                        <img class="gallery-img" src="//作品1图片链接//" alt="//作品1图片描述//" data-img-id="//1//"
+                            data-img-url="//作品1大图链接//">
                         <div class="gallery-overlay">
-                            <span class="view-details">查看详情</span>
+                            <span class="view-details">//查看详情按钮文字//</span>
                         </div>
                     </div>
                     <div class="gallery-caption">
-                        <h3>、、</h3>
-                        <p>、、</p>
+                        <h3>//作品1标题//</h3>
+                        <p>//作品1简介//</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-img-container">
-                        <div class="gallery-img placeholder" data-img-id="2"></div>
+                        <img class="gallery-img" src="//作品2图片链接//" alt="//作品2图片描述//"
+                            data-img-id="//2//" data-img-url="//作品2大图链接//">
                         <div class="gallery-overlay">
-                            <span class="view-details">查看详情</span>
+                            <span class="view-details">//查看详情按钮文字//</span>
                         </div>
                     </div>
                     <div class="gallery-caption">
-                        <h3>、、</h3>
-                        <p>、、</p>
+                        <h3>//作品2标题//</h3>
+                        <p>//作品2简介//</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-img-container">
-                        <div class="gallery-img placeholder" data-img-id="3"></div>
+                        <img class="gallery-img" src="//作品3图片链接//" alt="//作品3图片描述//"
+                            data-img-id="//3//" data-img-url="//作品3大图链接//">
                         <div class="gallery-overlay">
-                            <span class="view-details">、、</span>
+                            <span class="view-details">//查看详情按钮文字//</span>
                         </div>
                     </div>
                     <div class="gallery-caption">
-                        <h3>、、</h3>
-                        <p>、、</p>
+                        <h3>//作品3标题//</h3>
+                        <p>//作品3简介//</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-img-container">
-                        <div class="gallery-img placeholder" data-img-id="4"></div>
+                        <img class="gallery-img" src="//作品4图片链接//" alt="//作品4图片描述//"
+                            data-img-id="//4//" data-img-url="//作品4大图链接//">
                         <div class="gallery-overlay">
-                            <span class="view-details">查看详情</span>
+                            <span class="view-details">//查看详情按钮文字//</span>
                         </div>
                     </div>
                     <div class="gallery-caption">
-                        <h3>、、</h3>
-                        <p>、、</p>
+                        <h3>//作品4标题//</h3>
+                        <p>//作品4简介//</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-img-container">
-                        <div class="gallery-img placeholder" data-img-id="5"></div>
+                        <img class="gallery-img" src="//作品5图片链接//" alt="//作品5图片描述//"
+                            data-img-id="//5//" data-img-url="//作品5大图链接//">
                         <div class="gallery-overlay">
-                            <span class="view-details">查看详情</span>
+                            <span class="view-details">//查看详情按钮文字//</span>
                         </div>
                     </div>
                     <div class="gallery-caption">
-                        <h3>、、</h3>
-                        <p>、、</p>
+                        <h3>//作品5标题//</h3>
+                        <p>//作品5简介//</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-img-container">
-                        <div class="gallery-img placeholder" data-img-id="6"></div>
+                        <img class="gallery-img" src="//作品6图片链接//" alt="//作品6图片描述//"
+                            data-img-id="//6//" data-img-url="//作品6大图链接//">
                         <div class="gallery-overlay">
-                            <span class="view-details">查看详情</span>
+                            <span class="view-details">//查看详情按钮文字//</span>
                         </div>
                     </div>
                     <div class="gallery-caption">
-                        <h3>、、</h3>
-                        <p>、、</p>
+                        <h3>//作品6标题//</h3>
+                        <p>//作品6简介//</p>
                     </div>
                 </div>
             </div>
@@ -110,28 +176,14 @@
     <!-- 接单流程 -->
     <section id="process" class="section">
         <div class="container">
-            <h2 class="section-title">接单流程</h2>
+            <h2 class="section-title">//接单流程区标题//</h2>
             <div class="process-steps">
                 <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title">沟通需求</h3>
-                    <p class="step-description">详细描述风格偏好和特殊要求</p>
+                    <div class="step-number">//步骤编号//</div>
+                    <h3 class="step-title">//步骤标题//</h3>
+                    <p class="step-description">//步骤描述//</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3 class="step-title">确认模板</h3>
-                    <p class="step-description">选择合适的绘画模板和风格，确认细节和交付时间</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">付款</h3>
-                    <p class="step-description">根据定价完成付款，支持多种支付方式</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <h3 class="step-title">交付</h3>
-                    <p class="step-description">按时交付高清图片，可根据反馈进行适当修改</p>
-                </div>
+                <!-- 可复制step-card结构添加更多步骤 -->
             </div>
         </div>
     </section>
@@ -139,62 +191,37 @@
     <!-- 定价参考 -->
     <section id="pricing" class="section">
         <div class="container">
-            <h2 class="section-title">定价参考</h2>
+            <h2 class="section-title">//定价参考区标题//</h2>
             <div class="pricing-card">
                 <div class="price-item">
-                    <h3>、、</h3>
-                    <div class="price-range">¥、、 - ¥、、</div>
-                    <p>、、</p>
+                    <h3>//服务名称//</h3>
+                    <div class="price-range">//价格区间//</div>
+                    <p>//服务描述//</p>
                 </div>
-                <div class="price-item">
-                    <h3>、、</h3>
-                    <div class="price-range">¥、、</div>
-                    <p>、、</p>
-                </div>
-                <div class="price-item">
-                    <h3>、、</h3>
-                    <div class="price-range">¥、、</div>
-                    <p>、、</p>
-                </div>
-                <div class="price-item">
-                    <h3>、</h3>
-                    <div class="price-range">、、</div>
-                    <p>、</p>
-                </div>
+                <!-- 可复制price-item结构添加更多服务 -->
             </div>
-        </div>
-    </section>
-
-    <!-- 联系方式 -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">联系方式</h2>
-            <div class="contact-card">
-                <div class="contact-method">
-                    <h3>微信联系</h3>
-                    <div class="contact-value">。。</div>
-                </div>
-                <div class="contact-method">
-                    <h3>电子邮箱</h3>
-                    <div class="contact-value">。。</div>
-                </div>
-            </div>
+            <p style="color:#888;font-size:0.95rem;margin-top:18px;text-align:center;">
+                //定价说明补充，可选//
+            </p>
         </div>
     </section>
 
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
-            <p>© 2023 The website 1.0</p>
+            <p style="font-family:'Montserrat',sans-serif;font-size:1rem;letter-spacing:1px;">
+                //版权信息//
+            </p>
         </div>
     </footer>
 
     <!-- 图片查看器 -->
     <div class="image-viewer">
         <span class="close-viewer">&times;</span>
-        <img class="viewer-content" src="" alt="大图查看">
+        <img class="viewer-content" src="" alt="//大图查看alt//">
     </div>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
