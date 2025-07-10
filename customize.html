@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Customize - Handcraft Tech Cases</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/icons/logo.svg" alt="Logo" class="nav-logo-img">
+                <span class="nav-title">Handcraft Tech Cases</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html"><img src="images/icons/home.svg" alt="" class="nav-icon">Home</a>
+                <a href="artworks.html"><img src="images/icons/art.svg" alt="" class="nav-icon">Artworks</a>
+                <a href="customize.html"><img src="images/icons/custom.svg" alt="" class="nav-icon">Customize</a>
+                <a href="about.html"><img src="images/icons/about.svg" alt="" class="nav-icon">About</a>
+                <a href="order.html"><img src="images/icons/order.svg" alt="" class="nav-icon">Order</a>
+            </nav>
+            <button class="nav-hamburger" id="navHamburger" aria-label="菜单">
+                <img src="images/icons/menu.svg" alt="菜单">
+            </button>
+        </div>
+        <!-- 手机端全屏菜单 -->
+        <div class="nav-mobile-overlay" id="navMobileOverlay">
+            <button class="nav-mobile-close" id="navMobileClose" aria-label="关闭">
+                <img src="images/icons/close.svg" alt="关闭">
+            </button>
+            <nav class="nav-mobile-links">
+                <a href="index.html"><img src="images/icons/home.svg" alt="" class="nav-icon">Home</a>
+                <a href="artworks.html"><img src="images/icons/art.svg" alt="" class="nav-icon">Artworks</a>
+                <a href="customize.html"><img src="images/icons/custom.svg" alt="" class="nav-icon">Customize</a>
+                <a href="about.html"><img src="images/icons/about.svg" alt="" class="nav-icon">About</a>
+                <a href="order.html"><img src="images/icons/order.svg" alt="" class="nav-icon">Order</a>
+            </nav>
+        </div>
+    </header>
+    <main style="padding-top:80px;">
+        <section style="max-width:900px;margin:0 auto 48px auto;padding:0 24px;">
+            <h1 style="font-size:28px;font-weight:700;margin-bottom:12px;">3 Simple Steps to Your Custom Case</h1>
+            <p style="font-size:16px;color:#666;margin-bottom:32px;">只需三步，轻松定制你的专属手绘手机壳。</p>
+            <!-- 步骤流程 -->
+            <div class="custom-steps"
+                style="display:flex;gap:32px;align-items:flex-start;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;">
+                <div class="custom-step" style="flex:1 1 0;min-width:180px;text-align:center;">
+                    <div class="custom-step-icon" style="margin-bottom:12px;">
+                        <img src="images/icons/image-select.svg" alt="Step1" style="width:48px;height:48px;">
+                    </div>
+                    <div class="custom-step-title" style="font-size:18px;font-weight:600;margin-bottom:8px;">Step 1
+                    </div>
+                    <div class="custom-step-desc" style="font-size:16px;">Pick Your Artwork from Gallery or Upload Yours
+                    </div>
+                </div>
+                <div class="custom-step-progress"
+                    style="width:48px;display:flex;align-items:center;justify-content:center;">
+                    <div style="height:4px;width:100%;background:var(--primary);border-radius:2px;"></div>
+                </div>
+                <div class="custom-step" style="flex:1 1 0;min-width:180px;text-align:center;">
+                    <div class="custom-step-icon" style="margin-bottom:12px;">
+                        <img src="images/icons/device.svg" alt="Step2" style="width:48px;height:48px;">
+                    </div>
+                    <div class="custom-step-title" style="font-size:18px;font-weight:600;margin-bottom:8px;">Step 2
+                    </div>
+                    <div class="custom-step-desc" style="font-size:16px;">Choose Case Type & Phone Model</div>
+                </div>
+                <div class="custom-step-progress"
+                    style="width:48px;display:flex;align-items:center;justify-content:center;">
+                    <div style="height:4px;width:100%;background:var(--primary);border-radius:2px;"></div>
+                </div>
+                <div class="custom-step" style="flex:1 1 0;min-width:180px;text-align:center;">
+                    <div class="custom-step-icon" style="margin-bottom:12px;">
+                        <img src="images/icons/check.svg" alt="Step3" style="width:48px;height:48px;">
+                    </div>
+                    <div class="custom-step-title" style="font-size:18px;font-weight:600;margin-bottom:8px;">Step 3
+                    </div>
+                    <div class="custom-step-desc" style="font-size:16px;">Share Your Contact Info via WeChat</div>
+                </div>
+            </div>
+            <!-- FAQ区 -->
+            <div class="faq-list" style="margin-top:32px;">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">Q: 可以上传自己的手绘作品吗？</button>
+                    <div class="faq-answer">当然可以！在定制流程中选择“上传”，即可提交你的原创手绘图案。</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">Q: 支持哪些手机型号？</button>
+                    <div class="faq-answer">目前支持iPhone 15系列、Samsung S24、华为P60等主流型号，后续会持续增加。</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">Q: 如何联系艺术家沟通定制细节？</button>
+                    <div class="faq-answer">下单后可通过微信与艺术家直接沟通，二维码见“关于我”页面。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- 底部 -->
+    <footer class="footer">
+        <span>© 2024 Handcraft Tech Cases</span>
+        <button class="darkmode-toggle" id="darkModeToggle" aria-label="切换深色模式">
+            <img src="images/icons/moon.svg" alt="深色模式" id="darkModeIcon">
+        </button>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        // FAQ折叠交互
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.onclick = function () {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+                document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = '0');
+                if (!expanded) {
+                    this.setAttribute('aria-expanded', 'true');
+                    const answer = this.nextElementSibling;
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            };
+        });
+        // 初始化FAQ答案高度
+        document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = '0');
+    </script>
+    <style>
+        /* FAQ折叠面板样式 */
+        .faq-item {
+            margin-bottom: 16px;
+            border-radius: 8px;
+            background: #F3F2F1;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: left;
+            padding: 16px 20px;
+            cursor: pointer;
+            color: #323130;
+            transition: background .2s;
+        }
+
+        .faq-question[aria-expanded="true"] {
+            background: #EAEAEA;
+            color: #0078D7;
+        }
+
+        .faq-answer {
+            background: #fff;
+            font-size: 15px;
+            color: #444;
+            padding: 0 20px;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        body.darkmode .faq-item {
+            background: #232323;
+        }
+
+        body.darkmode .faq-answer {
+            background: #181818;
+            color: #eee;
+        }
+    </style>
+</body>
+
+</html>

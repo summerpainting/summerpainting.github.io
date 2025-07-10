@@ -1,0 +1,17 @@
+images/icons/logo.svg            # 导航栏logo
+images/icons/home.svg            # 首页图标
+images/icons/art.svg            # 画作页面图标
+images/icons/custom.svg         # 定制流程图标
+images/icons/about.svg          # 关于页面图标
+images/icons/order.svg          # 下单页面图标
+images/icons/menu.svg           # 移动端菜单图标
+images/icons/close.svg          # 关闭按钮图标
+images/icons/moon.svg           # 深色模式图标
+images/icons/sun.svg            # 浅色模式图标
+images/icons/check.svg          # 步骤完成图标
+images/icons/image-select.svg   # 图片选择图标
+images/icons/device.svg         # 设备选择图标
+images/icons/arrow-right.svg    # 详情按钮箭头
+images/hero/hero-case.png       # 首页主视觉图
+images/artworks/*               # 画作相关图片
+images/assets/avatar.jpg        # 关于页艺术家头像

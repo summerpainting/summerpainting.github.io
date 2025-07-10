@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>画作 - 手绘定制手机壳</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 导航栏复用 -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/icons/logo.svg" alt="Logo" class="nav-logo-img">
+                <span class="nav-title">手绘定制手机壳</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html"><img src="images/icons/home.svg" alt="" class="nav-icon">首页</a>
+                <a href="artworks.html" class="active"><img src="images/icons/art.svg" alt="" class="nav-icon">画作</a>
+                <a href="customize.html"><img src="images/icons/custom.svg" alt="" class="nav-icon">定制流程</a>
+                <a href="about.html"><img src="images/icons/about.svg" alt="" class="nav-icon">关于我</a>
+                <a href="order.html"><img src="images/icons/order.svg" alt="" class="nav-icon">下单</a>
+            </nav>
+            <button class="nav-hamburger" id="navHamburger" aria-label="菜单">
+                <img src="images/icons/menu.svg" alt="菜单">
+            </button>
+        </div>
+        <div class="nav-mobile-overlay" id="navMobileOverlay">
+            <button class="nav-mobile-close" id="navMobileClose" aria-label="关闭">
+                <img src="images/icons/close.svg" alt="关闭">
+            </button>
+            <nav class="nav-mobile-links">
+                <a href="index.html"><img src="images/icons/home.svg" alt="" class="nav-icon">首页</a>
+                <a href="artworks.html" class="active"><img src="images/icons/art.svg" alt="" class="nav-icon">画作</a>
+                <a href="customize.html"><img src="images/icons/custom.svg" alt="" class="nav-icon">定制流程</a>
+                <a href="about.html"><img src="images/icons/about.svg" alt="" class="nav-icon">关于我</a>
+                <a href="order.html"><img src="images/icons/order.svg" alt="" class="nav-icon">下单</a>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top:80px;">
+        <!-- 分类筛选栏 -->
+        <section class="artworks-filter" style="max-width:1200px;margin:0 auto 32px auto;padding:0 24px;">
+            <button class="artworks-tab active" data-category="all">全部</button>
+            <button class="artworks-tab" data-category="animal"><span style="color:#FFB900;">●</span> 动物</button>
+            <button class="artworks-tab" data-category="plant"><span style="color:#FFB900;">●</span> 植物</button>
+            <button class="artworks-tab" data-category="custom"><span style="color:#FFB900;">●</span> 定制</button>
+        </section>
+        <!-- 画作网格 -->
+        <section class="artworks-grid"
+            style="max-width:1200px;margin:0 auto;padding:0 24px 48px 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
+            <!-- 示例卡片，实际可复制/替换图片和信息 -->
+            <div class="artwork-card" data-category="animal">
+                <img src="images/artworks/animal-1-thumb.jpg" alt="Cat" class="artwork-thumb">
+                <div class="artwork-info">
+                    <div class="artwork-title">蓝色猫咪</div>
+                    <div class="artwork-price"><span style="color:#0078D7;font-weight:bold;">￥99</span></div>
+                </div>
+                <button class="artwork-view-btn" onclick="location.href='animal-1.html'">
+                    查看详情 <img src="images/icons/arrow-right.svg" alt=">" class="nav-icon" style="margin-left:4px;">
+                </button>
+            </div>
+            <div class="artwork-card" data-category="plant">
+                <img src="images/artworks/plant-1-thumb.jpg" alt="Leaf" class="artwork-thumb">
+                <div class="artwork-info">
+                    <div class="artwork-title">绿色叶子</div>
+                    <div class="artwork-price"><span style="color:#0078D7;font-weight:bold;">￥99</span></div>
+                </div>
+                <button class="artwork-view-btn" onclick="location.href='plant-1.html'">
+                    查看详情 <img src="images/icons/arrow-right.svg" alt=">" class="nav-icon" style="margin-left:4px;">
+                </button>
+            </div>
+            <div class="artwork-card" data-category="custom">
+                <img src="images/artworks/custom-1-thumb.jpg" alt="Custom" class="artwork-thumb">
+                <div class="artwork-info">
+                    <div class="artwork-title">你的创意</div>
+                    <div class="artwork-price"><span style="color:#0078D7;font-weight:bold;">￥129</span></div>
+                </div>
+                <button class="artwork-view-btn" onclick="location.href='custom-1.html'">
+                    查看详情 <img src="images/icons/arrow-right.svg" alt=">" class="nav-icon" style="margin-left:4px;">
+                </button>
+            </div>
+            <!-- ...可继续添加更多卡片... -->
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span>© 2024 手绘定制手机壳</span>
+        <button class="darkmode-toggle" id="darkModeToggle" aria-label="切换深色模式">
+            <img src="images/icons/moon.svg" alt="深色模式" id="darkModeIcon">
+        </button>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        // 分类筛选交互
+        document.querySelectorAll('.artworks-tab').forEach(tab => {
+            tab.onclick = function () {
+                document.querySelectorAll('.artworks-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                const cat = this.getAttribute('data-category');
+                document.querySelectorAll('.artwork-card').forEach(card => {
+                    if (cat === 'all' || card.getAttribute('data-category') === cat) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            };
+        });
+    </script>
+    <style>
+        /* filepath: d:\Website Remake 1.0\css\style.css (片段，实际已全局引入) */
+        .artworks-filter {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--divider);
+            padding-bottom: 8px;
+        }
+
+        .artworks-tab {
+            background: none;
+            border: none;
+            font-size: 18px;
+            color: var(--text-main);
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            transition: border-color .2s, color .2s;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        .artworks-tab.active {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            font-weight: bold;
+        }
+
+        .artwork-card {
+            background: var(--bg-light);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 24px 16px 16px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: box-shadow .3s, transform .3s, background .3s;
+            cursor: pointer;
+        }
+
+        .artwork-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-4px);
+            background: #fff;
+        }
+
+        body.darkmode .artwork-card:hover {
+            background: #232323;
+        }
+
+        .artwork-thumb {
+            width: 100%;
+            max-width: 220px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .artwork-info {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .artwork-title {
+            font-size: 18px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .artwork-price {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        .artwork-view-btn {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 20px;
+            font-size: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+            cursor: pointer;
+            transition: background .2s, box-shadow .2s, opacity .1s;
+            box-shadow: var(--shadow);
+        }
+
+        .artwork-view-btn:hover {
+            background: #005fa3;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .artwork-view-btn:active {
+            opacity: 0.9;
+        }
+
+        @media (max-width:1024px) {
+            .artworks-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+        }
+
+        @media (max-width:640px) {
+            .artworks-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                padding: 0 8px 32px 8px;
+            }
+
+            .artworks-filter {
+                gap: 16px;
+                padding: 0 8px 8px 8px;
+            }
+        }
+    </style>
+</body>
+
+</html>

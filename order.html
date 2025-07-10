@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Order - Handcraft Tech Cases</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/icons/logo.svg" alt="Logo" class="nav-logo-img">
+                <span class="nav-title">Handcraft Tech Cases</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html"><img src="images/icons/home.svg" alt="" class="nav-icon">Home</a>
+                <a href="artworks.html"><img src="images/icons/art.svg" alt="" class="nav-icon">Artworks</a>
+                <a href="customize.html"><img src="images/icons/custom.svg" alt="" class="nav-icon">Customize</a>
+                <a href="about.html"><img src="images/icons/about.svg" alt="" class="nav-icon">About</a>
+                <a href="order.html"><img src="images/icons/order.svg" alt="" class="nav-icon">Order</a>
+            </nav>
+            <button class="nav-hamburger" id="navHamburger" aria-label="菜单">
+                <img src="images/icons/menu.svg" alt="菜单">
+            </button>
+        </div>
+        <!-- 手机端全屏菜单 -->
+        <div class="nav-mobile-overlay" id="navMobileOverlay">
+            <button class="nav-mobile-close" id="navMobileClose" aria-label="关闭">
+                <img src="images/icons/close.svg" alt="关闭">
+            </button>
+            <nav class="nav-mobile-links">
+                <a href="index.html"><img src="images/icons/home.svg" alt="" class="nav-icon">Home</a>
+                <a href="artworks.html"><img src="images/icons/art.svg" alt="" class="nav-icon">Artworks</a>
+                <a href="customize.html"><img src="images/icons/custom.svg" alt="" class="nav-icon">Customize</a>
+                <a href="about.html"><img src="images/icons/about.svg" alt="" class="nav-icon">About</a>
+                <a href="order.html"><img src="images/icons/order.svg" alt="" class="nav-icon">Order</a>
+            </nav>
+        </div>
+    </header>
+    <main style="padding-top:80px;">
+        <section style="max-width:520px;margin:0 auto 48px auto;padding:0 24px;">
+            <!-- 步骤指示器 -->
+            <div style="display:flex;gap:24px;margin-bottom:32px;">
+                <div
+                    style="flex:1;text-align:center;font-size:16px;padding-bottom:6px;border-bottom:2px solid #0078D7;font-weight:700;color:#0078D7;">
+                    1. Artwork
+                </div>
+                <div
+                    style="flex:1;text-align:center;font-size:16px;padding-bottom:6px;border-bottom:2px solid #EAEAEA;font-weight:700;color:#888;">
+                    2. Details
+                </div>
+                <div
+                    style="flex:1;text-align:center;font-size:16px;padding-bottom:6px;border-bottom:2px solid #EAEAEA;font-weight:700;color:#888;">
+                    3. Contact
+                </div>
+            </div>
+            <!-- 表单区 -->
+            <form style="display:flex;flex-direction:column;gap:24px;">
+                <div>
+                    <label style="font-weight:600;display:block;margin-bottom:8px;">Artwork</label>
+                    <input type="text" value="Cat in Blue" readonly

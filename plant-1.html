@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Green Leaf - Handcraft Tech Cases</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/icons/logo.svg" alt="Logo" class="nav-logo-img">
+                <span class="nav-title">Handcraft Tech Cases</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html"><img src="images/icons/home.svg" alt="" class="nav-icon">Home</a>
+                <a href="artworks.html"><img src="images/icons/art.svg" alt="" class="nav-icon">Artworks</a>
+                <a href="customize.html"><img src="images/icons/custom.svg" alt="" class="nav-icon">Customize</a>
+                <a href="about.html"><img src="images/icons/about.svg" alt="" class="nav-icon">About</a>
+                <a href="order.html"><img src="images/icons/order.svg" alt="" class="nav-icon">Order</a>
+            </nav>
+            <button class="nav-hamburger" id="navHamburger" aria-label="菜单">
+                <img src="images/icons/menu.svg" alt="菜单">
+            </button>
+        </div>
+        <!-- 手机端全屏菜单 -->
+        <div class="nav-mobile-overlay" id="navMobileOverlay">
+            <button class="nav-mobile-close" id="navMobileClose" aria-label="关闭">
+                <img src="images/icons/close.svg" alt="关闭">
+            </button>
+            <nav class="nav-mobile-links">
+                <a href="index.html"><img src="images/icons/home.svg" alt="" class="nav-icon">Home</a>
+                <a href="artworks.html"><img src="images/icons/art.svg" alt="" class="nav-icon">Artworks</a>
+                <a href="customize.html"><img src="images/icons/custom.svg" alt="" class="nav-icon">Customize</a>
+                <a href="about.html"><img src="images/icons/about.svg" alt="" class="nav-icon">About</a>
+                <a href="order.html"><img src="images/icons/order.svg" alt="" class="nav-icon">Order</a>
+            </nav>
+        </div>
+    </header>
+    <main style="padding-top:80px;">
+        <section
+            style="max-width:1200px;margin:0 auto;display:flex;gap:48px;align-items:flex-start;flex-wrap:wrap;padding:0 24px 48px 24px;">
+            <div style="flex:1 1 320px;max-width:420px;">
+                <div class="detail-img-box" style="margin-bottom:24px;position:relative;">
+                    <img src="images/artworks/plant-1.jpg" alt="Green Leaf" class="detail-img"
+                        style="border-radius:8px;box-shadow:var(--shadow);cursor:zoom-in;"
+                        onclick="showZoom('images/artworks/plant-1.jpg')">
+                    <div
+                        style="position:absolute;bottom:8px;right:12px;font-size:13px;color:#888;background:rgba(255,255,255,0.7);border-radius:4px;padding:2px 8px;">
+                        Click to zoom</div>
+                </div>
+                <div class="detail-img-box" style="position:relative;">
+                    <img src="images/artworks/plant-1-case.jpg" alt="Leaf Case" class="detail-img"
+                        style="border-radius:8px;box-shadow:var(--shadow);cursor:zoom-in;"
+                        onclick="showZoom('images/artworks/plant-1-case.jpg')">
+                    <div
+                        style="position:absolute;bottom:8px;right:12px;font-size:13px;color:#888;background:rgba(255,255,255,0.7);border-radius:4px;padding:2px 8px;">
+                        Click to zoom</div>
+                </div>
+            </div>
+            <div style="flex:1 1 320px;max-width:420px;">
+                <h2 style="font-size:24px;font-weight:bold;margin-bottom:16px;">Green Leaf</h2>
+                <div style="font-size:16px;line-height:1.6;margin-bottom:24px;">
+                    <p>一片清新的绿色叶子，象征自然与生命力。</p>
+                    <p>手绘笔触与现代科技壳型的融合，带来独特质感。</p>
+                    <p>适合热爱自然与极简风格的你。</p>
+                </div>
+                <form id="caseForm" style="margin-bottom:24px;">
+                    <div style="margin-bottom:16px;">
+                        <label style="font-weight:600;display:block;margin-bottom:8px;">Case Type</label>
+                        <label style="margin-right:24px;">
+                            <input type="radio" name="caseType" value="soft" checked
+                                style="accent-color:var(--primary);margin-right:6px;">
+                            软壳
+                        </label>
+                        <label>
+                            <input type="radio" name="caseType" value="hard"
+                                style="accent-color:var(--primary);margin-right:6px;">
+                            硬壳
+                        </label>
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <label style="font-weight:600;display:block;margin-bottom:8px;">Phone Model</label>
+                        <select name="phoneModel"
+                            style="width:100%;padding:8px 12px;border:1px solid #EAEAEA;border-radius:4px;font-size:16px;">
+                            <option>iPhone 15</option>
+                            <option>iPhone 15 Pro</option>
+                            <option>Samsung S24</option>
+                            <option>Huawei P60</option>
+                        </select>
+                    </div>
+                </form>
+                <div id="priceBox" style="margin-bottom:24px;transition:opacity .3s;opacity:1;">
+                    <span style="color:#888;text-decoration:line-through;margin-right:12px;">￥129</span>
+                    <span style="color:#0078D7;font-size:22px;font-weight:bold;">￥99</span>
+                </div>
+                <button class="button" style="width:100%;font-size:18px;" onclick="location.href='order.html'">Add to
+                    Custom List</button>
+            </div>
+        </section>
+        <div id="zoomModal"
+            style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;">
+            <div style="position:relative;">
+                <img id="zoomImg" src="" alt="Zoom"
+                    style="max-width:90vw;max-height:80vh;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.3);">
+                <button onclick="hideZoom()"
+                    style="position:absolute;top:-40px;right:0;background:none;border:none;cursor:pointer;">
+                    <img src="images/icons/close.svg" alt="关闭" style="width:36px;height:36px;">
+                </button>
+            </div>
+        </div>
+    </main>
+    <!-- 底部 -->
+    <footer class="footer">
+        <span>© 2024 Handcraft Tech Cases</span>
+        <button class="darkmode-toggle" id="darkModeToggle" aria-label="切换深色模式">
+            <img src="images/icons/moon.svg" alt="深色模式" id="darkModeIcon">
+        </button>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        function showZoom(src) {
+            document.getElementById('zoomImg').src = src;
+            document.getElementById('zoomModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function hideZoom() {
+            document.getElementById('zoomModal').style.display = 'none';
+            document.body.style.overflow = '';
+        }
+        const caseForm = document.getElementById('caseForm');
+        const priceBox = document.getElementById('priceBox');
+        if (caseForm && priceBox) {
+            caseForm.onchange = function () {
+                priceBox.style.opacity = 0;
+                setTimeout(() => { priceBox.style.opacity = 1; }, 300);
+            };
+        }
+    </script>
+</body>
+
+</html>
