@@ -467,12 +467,33 @@ body.darkmode .feature-card:hover {
 }
 
 @media (max-width: 640px) {
-    .nav-links {
-        display: none;
-    }
+    /* =========================
+       移动端响应式 (max-width: 768px)
+       ========================= */
+    @media (max-width: 768px) {
 
-    .nav-hamburger {
-        display: block;
+        /* 隐藏桌面导航 */
+        .nav-links {
+            display: none;
+        }
+
+        /* 显示汉堡菜单 */
+        .nav-hamburger {
+            display: block;
+        }
+
+        /* 移动端菜单样式 */
+        .nav-mobile-overlay {
+            display: block;
+            background: var(--bg-main);
+            height: 100vh;
+            padding-top: 80px;
+        }
+
+        /* 轮播图高度调整 */
+        .carousel {
+            height: 30vh !important;
+        }
     }
 
     .nav-container {
@@ -522,6 +543,78 @@ body.darkmode .feature-card:hover {
     .footer {
         padding: 24px 0 16px 0;
         font-size: 13px;
+    }
+}
+
+/* 图片放大弹窗样式 */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: zoom-out;
+}
+
+.image-modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: modalFadeIn 0.3s cubic-bezier(.4, 0, .2, 1);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 表单错误提示 */
+.error-tooltip {
+    position: absolute;
+    background: #dc3546;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Segoe UI';
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-out;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.error-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent transparent #dc3546 transparent;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
