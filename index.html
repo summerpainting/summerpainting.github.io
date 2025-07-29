@@ -1,88 +1,239 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>手绘定制手机壳 - Handcraft Tech Cases</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牛马手机壳 - 原创插画手机壳定制</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 页面特定样式 */
+        .logo-icon img {
+            width: 64px;
+            height: 64px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, rgba(69, 123, 157, 0.1) 0%, rgba(255, 255, 255, 0.9) 100%);
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #1d3557;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #457b9d;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: #457b9d;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d3557;
+            transform: translateY(-3px);
+        }
+
+        .latest-works {
+            margin: 40px 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .work-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .work-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .work-info {
+            padding: 15px;
+            background-color: white;
+        }
+
+        .work-title {
+            font-size: 1.1rem;
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .work-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- 顶部导航栏 -->
-    <header class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="images/icons/logo.svg" alt="Logo" class="nav-logo-img">
-                <span class="nav-title">手绘定制手机壳</span>
-            </a>
-            <nav class="nav-links" id="navLinks">
-                <a href="index.html"><img src="images/icons/home.svg" alt="" class="nav-icon">首页</a>
-                <a href="artworks.html"><img src="images/icons/art.svg" alt="" class="nav-icon">画作</a>
-                <a href="customize.html"><img src="images/icons/custom.svg" alt="" class="nav-icon">定制流程</a>
-                <a href="about.html"><img src="images/icons/about.svg" alt="" class="nav-icon">关于我</a>
-                <a href="order.html"><img src="images/icons/order.svg" alt="" class="nav-icon">下单</a>
+    <header>
+        <div class="header-container container">
+            <a href=" " class="logo">
+                <span class="logo-icon"><img src="photo/logo1.jpg" width="64" height="64" alt="logo"></span>
+                牛马手机壳
+            </a >
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">首页</a ></li>
+                    <li><a href="gallery.html">作品集</a ></li>
+                    <li><a href="products.html">产品定制</a ></li>
+                    <li><a href="copyright.html">版权声明</a ></li>
+                    <li><a href="customize.html" class="cta-btn">定制设计</a ></li>
+                </ul>
             </nav>
-            <button class="nav-hamburger" id="navHamburger" aria-label="菜单">
-                <img src="images/icons/menu.svg" alt="菜单">
-            </button>
-        </div>
-        <!-- 手机端全屏菜单 -->
-        <div class="nav-mobile-overlay" id="navMobileOverlay">
-            <button class="nav-mobile-close" id="navMobileClose" aria-label="关闭">
-                <img src="images/icons/close.svg" alt="关闭">
-            </button>
-            <nav class="nav-mobile-links">
-                <a href="index.html"><img src="images/icons/home.svg" alt="" class="nav-icon">首页</a>
-                <a href="artworks.html"><img src="images/icons/art.svg" alt="" class="nav-icon">画作</a>
-                <a href="customize.html"><img src="images/icons/custom.svg" alt="" class="nav-icon">定制流程</a>
-                <a href="about.html"><img src="images/icons/about.svg" alt="" class="nav-icon">关于我</a>
-                <a href="order.html"><img src="images/icons/order.svg" alt="" class="nav-icon">下单</a>
-            </nav>
+            
+            <div class="menu-toggle" id="mobileMenu">
+                ☰
+            </div>
         </div>
     </header>
-
-    <main>
-        <!-- hero区 -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">用手绘温度，点亮你的手机生活</h1>
-                <p class="hero-subtitle">随手一画，也能变成专属高端手机壳。让你的灵感和故事，陪你每一天。</p>
-            </div>
-            <div class="hero-visual">
-                <img src="images/hero/hero-case.png" alt="手绘手机壳展示" class="hero-img" id="heroImg">
+    
+    <main class="container">
+        <!-- 公告区域 -->
+        <section class="announcement">
+            <div class="announcement-content">
+                <h2>最新公告</h2>
+                <p>2025年夏季新款手机壳已上线，全场定制享8折优惠，截止日期2025-08-31。</p >
+                <button class="close-btn">&times;</button>
             </div>
         </section>
 
-        <!-- 功能区块 -->
-        <section class="features">
-            <div class="feature-card">
-                <img src="images/icons/gallery.svg" alt="浏览" class="feature-icon">
-                <h2 class="feature-title">浏览画作</h2>
-                <p class="feature-desc">这里有各种有趣的手绘设计，喜欢哪一款都可以直接定制哦！</p>
-            </div>
-            <div class="feature-card">
-                <img src="images/icons/steps.svg" alt="定制流程" class="feature-icon">
-                <h2 class="feature-title">定制流程</h2>
-                <p class="feature-desc">三步搞定，轻松拥有属于你的专属手机壳。</p>
-            </div>
-            <div class="feature-card">
-                <img src="images/icons/gallery-user.svg" alt="用户作品" class="feature-icon">
-                <h2 class="feature-title">用户作品</h2>
-                <p class="feature-desc">来看看大家的创意成品，说不定下一个灵感就是你！</p>
-            </div>
+        <!-- 英雄区域 -->
+        <section class="hero">
+            <h1>牛马手机壳</h1>
+            <p>原创插画手机壳定制，为您的设备增添独特个性</p >
+            <a href="gallery.html" class="btn-primary">浏览全部作品</a >
+        </section>
+
+        <!-- 最新作品展示 -->
+        <section class="latest-works">
+            <h2>最新作品</h2>
+            <div id="works-container" class="grid-container"></div>
         </section>
     </main>
-
-    <!-- 底部 -->
-    <footer class="footer">
-        <span>© 2024 手绘定制手机壳</span>
-        <button class="darkmode-toggle" id="darkModeToggle" aria-label="切换深色模式">
-            <img src="images/icons/moon.svg" alt="深色模式" id="darkModeIcon">
-        </button>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 牛马手机壳 - 保留所有权利</p >
+        </div>
     </footer>
-
-    <script src="js/script.js"></script>
-</body>
-
-</html>
+    
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobileMenu').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('nav-active');
+        });
+        
+        // 关闭公告功能
+        document.querySelector('.close-btn').addEventListener('click', function () {
+            document.querySelector('.announcement').style.display = 'none';
+        });
+        
+        // 加载最新作品
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.getElementById('works-container');
+            
+    </script>      
+    <script>
+            // 模拟数据加载
+            
+const mockWorks = [
+                {
+                    title: "夏日海洋系列",
+                    thumbnail: "assets/images/works/works1.jpg", 
+                    date: "2025-07-15"
+                },
+                {
+                    title: "森林奇遇插画",
+                    thumbnail: "assets/images/works/works2.jpg", 
+                    date: "2025-07-10"
+                },
+                {
+                    title: "城市涂鸦艺术",
+                    thumbnail: "assets/images/works/works3.jpg", 
+                    date: "2025-07-05"
+                },
+                {
+                    title: "极光幻想主题",
+                    thumbnail: "assets/images/works/works4.jpg", 
+                    date: "2025-06-28"
+                },
+                {
+                    title: "复古蒸汽朋克",
+                    thumbnail: "assets/images/works/works5.jpg", 
+                    date: "2025-06-20"
+                },
+                {
+                    title: "简约几何美学",
+                    thumbnail: "assets/images/works/works6.jpg", 
+                    date: "2025-06-15"
+                }
+            ];            
+            // 显示作品
+            mockWorks.forEach((work, index) => {
+                const workCard = document.createElement('div');
+                workCard.className = 'work-card';
+                workCard.innerHTML = `
+                    <img src="${work.thumbnail}" alt="${work.title}">
+                    <div class="work-info">
+                        <h3 class="work-title">${work.title}</h3>
+                        <p class="work-date">${work.date}</p >
+                    </div>
+                `;
+                container.appendChild(workCard);
+                
+                // 延迟加载动画
+                setTimeout(() => {
+                    workCard.classList.add('loaded');
+                }, 100 * index);
+            });
+            
+            // 高亮当前页面导航
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('nav a');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (currentPage === linkPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+            });
+        });
+    </script>

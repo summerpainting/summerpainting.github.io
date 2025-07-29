@@ -1,176 +1,199 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Customize - Handcraft Tech Cases</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <!-- 顶部导航栏 -->
-    <header class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="images/icons/logo.svg" alt="Logo" class="nav-logo-img">
-                <span class="nav-title">Handcraft Tech Cases</span>
-            </a>
-            <nav class="nav-links" id="navLinks">
-                <a href="index.html"><img src="images/icons/home.svg" alt="" class="nav-icon">Home</a>
-                <a href="artworks.html"><img src="images/icons/art.svg" alt="" class="nav-icon">Artworks</a>
-                <a href="customize.html"><img src="images/icons/custom.svg" alt="" class="nav-icon">Customize</a>
-                <a href="about.html"><img src="images/icons/about.svg" alt="" class="nav-icon">About</a>
-                <a href="order.html"><img src="images/icons/order.svg" alt="" class="nav-icon">Order</a>
-            </nav>
-            <button class="nav-hamburger" id="navHamburger" aria-label="菜单">
-                <img src="images/icons/menu.svg" alt="菜单">
-            </button>
-        </div>
-        <!-- 手机端全屏菜单 -->
-        <div class="nav-mobile-overlay" id="navMobileOverlay">
-            <button class="nav-mobile-close" id="navMobileClose" aria-label="关闭">
-                <img src="images/icons/close.svg" alt="关闭">
-            </button>
-            <nav class="nav-mobile-links">
-                <a href="index.html"><img src="images/icons/home.svg" alt="" class="nav-icon">Home</a>
-                <a href="artworks.html"><img src="images/icons/art.svg" alt="" class="nav-icon">Artworks</a>
-                <a href="customize.html"><img src="images/icons/custom.svg" alt="" class="nav-icon">Customize</a>
-                <a href="about.html"><img src="images/icons/about.svg" alt="" class="nav-icon">About</a>
-                <a href="order.html"><img src="images/icons/order.svg" alt="" class="nav-icon">Order</a>
-            </nav>
-        </div>
-    </header>
-    <main style="padding-top:80px;">
-        <section style="max-width:900px;margin:0 auto 48px auto;padding:0 24px;">
-            <h1 style="font-size:28px;font-weight:700;margin-bottom:12px;">3 Simple Steps to Your Custom Case</h1>
-            <p style="font-size:16px;color:#666;margin-bottom:32px;">只需三步，轻松定制你的专属手绘手机壳。</p>
-            <!-- 步骤流程 -->
-            <div class="custom-steps"
-                style="display:flex;gap:32px;align-items:flex-start;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;">
-                <div class="custom-step" style="flex:1 1 0;min-width:180px;text-align:center;">
-                    <div class="custom-step-icon" style="margin-bottom:12px;">
-                        <img src="images/icons/image-select.svg" alt="Step1" style="width:48px;height:48px;">
-                    </div>
-                    <div class="custom-step-title" style="font-size:18px;font-weight:600;margin-bottom:8px;">Step 1
-                    </div>
-                    <div class="custom-step-desc" style="font-size:16px;">Pick Your Artwork from Gallery or Upload Yours
-                    </div>
-                </div>
-                <div class="custom-step-progress"
-                    style="width:48px;display:flex;align-items:center;justify-content:center;">
-                    <div style="height:4px;width:100%;background:var(--primary);border-radius:2px;"></div>
-                </div>
-                <div class="custom-step" style="flex:1 1 0;min-width:180px;text-align:center;">
-                    <div class="custom-step-icon" style="margin-bottom:12px;">
-                        <img src="images/icons/device.svg" alt="Step2" style="width:48px;height:48px;">
-                    </div>
-                    <div class="custom-step-title" style="font-size:18px;font-weight:600;margin-bottom:8px;">Step 2
-                    </div>
-                    <div class="custom-step-desc" style="font-size:16px;">Choose Case Type & Phone Model</div>
-                </div>
-                <div class="custom-step-progress"
-                    style="width:48px;display:flex;align-items:center;justify-content:center;">
-                    <div style="height:4px;width:100%;background:var(--primary);border-radius:2px;"></div>
-                </div>
-                <div class="custom-step" style="flex:1 1 0;min-width:180px;text-align:center;">
-                    <div class="custom-step-icon" style="margin-bottom:12px;">
-                        <img src="images/icons/check.svg" alt="Step3" style="width:48px;height:48px;">
-                    </div>
-                    <div class="custom-step-title" style="font-size:18px;font-weight:600;margin-bottom:8px;">Step 3
-                    </div>
-                    <div class="custom-step-desc" style="font-size:16px;">Share Your Contact Info via WeChat</div>
-                </div>
-            </div>
-            <!-- FAQ区 -->
-            <div class="faq-list" style="margin-top:32px;">
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">Q: 可以上传自己的手绘作品吗？</button>
-                    <div class="faq-answer">当然可以！在定制流程中选择“上传”，即可提交你的原创手绘图案。</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">Q: 支持哪些手机型号？</button>
-                    <div class="faq-answer">目前支持iPhone 15系列、Samsung S24、华为P60等主流型号，后续会持续增加。</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">Q: 如何联系艺术家沟通定制细节？</button>
-                    <div class="faq-answer">下单后可通过微信与艺术家直接沟通，二维码见“关于我”页面。</div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- 底部 -->
-    <footer class="footer">
-        <span>© 2024 Handcraft Tech Cases</span>
-        <button class="darkmode-toggle" id="darkModeToggle" aria-label="切换深色模式">
-            <img src="images/icons/moon.svg" alt="深色模式" id="darkModeIcon">
-        </button>
-    </footer>
-    <script src="js/script.js"></script>
-    <script>
-        // FAQ折叠交互
-        document.querySelectorAll('.faq-question').forEach(btn => {
-            btn.onclick = function () {
-                const expanded = this.getAttribute('aria-expanded') === 'true';
-                document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
-                document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = '0');
-                if (!expanded) {
-                    this.setAttribute('aria-expanded', 'true');
-                    const answer = this.nextElementSibling;
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                }
-            };
-        });
-        // 初始化FAQ答案高度
-        document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = '0');
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定制设计 - 牛马手机壳</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* FAQ折叠面板样式 */
-        .faq-item {
-            margin-bottom: 16px;
+        .customize-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .preview-area {
+            background: #f8f9fa;
+            padding: 20px;
             border-radius: 8px;
-            background: #F3F2F1;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .faq-question {
+        .preview-phone {
+            width: 300px;
+            height: 600px;
+            background: url('assets/images/phone-template.png') center/contain no-repeat;
+            position: relative;
+        }
+
+        .design-preview {
+            position: absolute;
+            width: 85%;
+            height: 75%;
+            top: 12%;
+            left: 7.5%;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .form-column {
+            padding-right: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
             width: 100%;
-            background: none;
-            border: none;
-            font-size: 16px;
-            font-weight: 600;
-            text-align: left;
-            padding: 16px 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .color-picker {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .color-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             cursor: pointer;
-            color: #323130;
-            transition: background .2s;
+            border: 2px solid transparent;
         }
 
-        .faq-question[aria-expanded="true"] {
-            background: #EAEAEA;
-            color: #0078D7;
-        }
-
-        .faq-answer {
-            background: #fff;
-            font-size: 15px;
-            color: #444;
-            padding: 0 20px;
-            overflow: hidden;
-            max-height: 0;
-            transition: max-height 0.3s cubic-bezier(.4, 0, .2, 1);
-        }
-
-        body.darkmode .faq-item {
-            background: #232323;
-        }
-
-        body.darkmode .faq-answer {
-            background: #181818;
-            color: #eee;
+        .color-option.selected {
+            border-color: #457b9d;
         }
     </style>
-</body>
+</head>
 
+<body class="watermark">
+    <header>
+        <div class="header-container container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><img src="photo/logo1.jpg" weight=64 height=64 alt="logo"></span>
+                牛马手机壳
+            </a>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="gallery.html">作品集</a></li>
+                    <li><a href="products.html">产品定制</a></li>
+                    <li><a href="copyright.html">版权声明</a></li>
+                    <li><a href="customize.html" class="cta-btn active">定制设计</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-toggle" id="mobileMenu">
+                ☰
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>手机壳定制设计</h1>
+        
+        <div class="customize-container">
+            <div class="form-column">
+                <form id="design-form" action="https://formspree.io/f/mqazgojj" method="POST">
+                    <div class="form-group">
+                        <label for="design-style">设计风格：</label>
+                        <select id="design-style" class="form-control" name="design-style" required>
+                            <option value="">请选择设计风格</option>
+                            <option value="minimalist">极简风格</option>
+                            <option value="vintage">复古风格</option>
+                            <option value="illustration">插画风格</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>边框颜色：</label>
+                        <div class="color-picker">
+                            <div class="color-option" style="background:#ffffff" data-color="#ffffff"></div>
+                            <div class="color-option" style="background:#000000" data-color="#000000"></div>
+                            <div class="color-option" style="background:#457b9d" data-color="#457b9d"></div>
+                        </div>
+                        <input type="hidden" id="border-color" name="border-color" value="#ffffff">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="artwork">选择作品：</label>
+                        <select id="artwork" class="form-control" name="artwork" required>
+                            <option value="">请选择设计作品</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">个性文字（最多20字）：</label>
+                        <input type="text" id="message" class="form-control" name="message" maxlength="20">
+                    </div>
+
+                    <button type="submit" class="order-btn">提交定制</button>
+                </form>
+            </div>
+
+            <div class="preview-area">
+                <h3>实时预览</h3>
+                <div class="preview-phone">
+                    <div class="design-preview" id="design-preview"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 牛马手机壳 - 保留所有权利</p>
+        </div>
+    </footer>
+
+    <script>
+        // 颜色选择交互
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                document.getElementById('border-color').value = this.dataset.color;
+            });
+        });
+
+        // 加载可用作品
+        fetch('data/works.json')
+            .then(response => response.json())
+            .then(data => {
+                const select = document.getElementById('artwork');
+                data.forEach(work => {
+                    const option = document.createElement('option');
+                    option.value = work.id;
+                    option.textContent = `${work.title} (ID: ${work.id})`;
+                    select.appendChild(option);
+                });
+            });
+
+        // 实时预览更新
+        document.getElementById('design-form').addEventListener('change', function(e) {
+            const preview = document.getElementById('design-preview');
+            if(e.target.id === 'artwork') {
+                preview.style.backgroundImage = `url('assets/images/works/${e.target.value}.jpg')`;
+            }
+            if(e.target.id === 'message') {
+                preview.textContent = e.target.value;
+            }
+        });
+    </script>
+</body>
 </html>
